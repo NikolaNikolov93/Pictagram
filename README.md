@@ -19,3 +19,6 @@ _3.Route Guards_<br>
 _4.Comments_<br>
 
 ## Things to fix!
+
+_1.Some components render twice_<br>
+_2.Firebase firestor for database_<br>
