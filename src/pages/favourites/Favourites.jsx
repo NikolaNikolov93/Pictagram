@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Favourites.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPhotos, resetPhotoState } from "../../state/auth/photosSlice";
+import { fetchPhotos } from "../../state/auth/photosSlice";
 import Picture from "../picutres/Picture";
 
 const Favourites = () => {
