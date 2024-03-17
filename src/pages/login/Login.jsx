@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { auth } from "../../firebase/firebase";
 import { useDispatch } from "react-redux";
 import { saveUser, saveToken, saveUserId } from "../../state/auth/authSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div className={styles["form-container"]}>
       <form onSubmit={handleSubmit}>
-        <h1>Login</h1>
+        <h2>Login to catch up!</h2>
         <div>
           <input
             placeholder="Type your email"
@@ -68,6 +68,10 @@ const Login = () => {
         </div>
         {err ? <div className={styles["error-msg"]}>{err.message}</div> : <></>}
         <button type="submit">Login</button>
+        <p>
+          Don't have an account?{" "}
+          <Link to="/register">Click here to register</Link>
+        </p>
       </form>
     </div>
   );

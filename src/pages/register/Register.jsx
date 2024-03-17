@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Register.module.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ const Register = () => {
   return (
     <div className={styles["form-container"]}>
       <form onSubmit={handleSubmit}>
-        <h1>Register</h1>
+        <h2>Register to see more!</h2>
         <div>
           <input
             placeholder="Type your email"
@@ -62,6 +62,9 @@ const Register = () => {
         </div>
         {err ? <div className={styles["error-msg"]}>{err.message}</div> : <></>}
         <button type="submit">Login</button>
+        <p>
+          Already have an account? <Link to="/login">Click here to login</Link>
+        </p>
       </form>
     </div>
   );
