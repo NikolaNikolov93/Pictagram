@@ -17,11 +17,12 @@ _1.Authorization_<br>
 _2.Pagination_<br>
 _3.Route Guards_<br>
 _4.Comments_<br>
-_4.Search bar functionality_<br>
-_4.Functional Ads panel_ <br>
-_4.Likes to work with databse_ <br>
+_5.Search bar functionality_<br>
+_5.Loading screens_<br>
 
 ## Things to fix!
 
 _1.Some components render twice_<br>
 _2.Firebase firestor for database_<br>
+_3.Likes to work with databse_ <br>
+_4.Functional Ads panel_ <br>
