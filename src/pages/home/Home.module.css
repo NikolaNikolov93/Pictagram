@@ -6,7 +6,11 @@
 .home h2 {
   text-align: center;
   margin-bottom: 0.5em;
+}
+.categories-headline {
   opacity: 50%;
+  text-align: center;
+  margin: 0.5em 0em;
 }
 .catalogs-container {
   display: flex;

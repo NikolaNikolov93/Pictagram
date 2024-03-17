@@ -34,7 +34,7 @@ const Home = () => {
             <h3>Adventures LTD</h3>
           </div>
         </section>
-        <h2>Categories</h2>
+        <h3 className={styles["categories-headline"]}>Categories</h3>
         <div className={styles["catalogs-container"]}>
           <Catalog
             key={1}
