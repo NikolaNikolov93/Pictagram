@@ -25,12 +25,19 @@ const Register = () => {
     e.preventDefault();
     setLoading(true);
     try {
+      /**
+       * Handling register with Firebase authentication
+       */
+
       const response = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       ).then(setLoading(false));
-
+      /**
+       * If email --> navigate to home page
+       * else set the error to be displayed on the form
+       */
       if (response) {
         navigate("/login");
       }

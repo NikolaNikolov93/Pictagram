@@ -28,6 +28,10 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
+      /**
+       * Handling login with Firebase authentication and
+       */
+
       await signInWithEmailAndPassword(auth, email, password).then(
         (userCredential) => {
           dispatch(saveUser(userCredential.user.email));
@@ -35,6 +39,10 @@ const Login = () => {
           dispatch(saveUserId(userCredential._tokenResponse.localId));
         }
       );
+      /**
+       * If email --> navigate to home page
+       * else set the error to be displayed on the form
+       */
       if (email != "") {
         navigate("/");
       }

@@ -11,6 +11,9 @@ const Picture = ({ id, thumbnail, title, url }) => {
   const likedPics = useSelector((state) => state.user.likedPics);
   const user = useSelector((state) => state.user.user);
 
+  /**
+   * Checks for liked pictures
+   */
   useEffect(() => {
     if (likedPics.includes(id)) {
       setIsLiked(true);
@@ -18,6 +21,11 @@ const Picture = ({ id, thumbnail, title, url }) => {
       setIsLiked(false);
     }
   }, [likedPics]);
+  /**
+   *
+   * @param {handleLike} id
+   * Adds or remove photos from favourites list in redux store
+   */
   function handleLike(id) {
     if (isLiked) {
       dispatch(removeLikedPic(id));
