@@ -1,11 +1,49 @@
 .home h1 {
   text-align: center;
   color: black;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+}
+.home h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 .catalogs-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   justify-content: space-around;
+}
+.ads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.ads-item {
+  flex-basis: calc((100% - 1em * 2) / 3);
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 2px rgba(83, 83, 83, 0.596);
+  overflow: hidden;
+  position: relative;
+}
+.ads-item h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+.ads-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }

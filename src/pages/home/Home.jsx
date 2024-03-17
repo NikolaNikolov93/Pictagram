@@ -5,7 +5,36 @@ const Home = () => {
   return (
     <>
       <div className={styles["home"]}>
-        <h1>Catalogs</h1>
+        <h1>Take a look of the best from Pictagram</h1>
+
+        <h2>Our partners</h2>
+        <section className={styles["ads"]}>
+          <div
+            className={styles["ads-item"]}
+            style={{
+              backgroundImage: `url(${`https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`})`,
+            }}
+          >
+            <h3>Best interor LTD</h3>
+          </div>
+          <div
+            className={styles["ads-item"]}
+            style={{
+              backgroundImage: `url(${`https://images.unsplash.com/photo-1583784561105-a674080f391e?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`})`,
+            }}
+          >
+            <h3>Top Cosmetics LTD</h3>
+          </div>
+          <div
+            className={styles["ads-item"]}
+            style={{
+              backgroundImage: `url(${`https://images.unsplash.com/photo-1471400974796-1c823d00a96f?q=80&w=1667&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`})`,
+            }}
+          >
+            <h3>Adventures LTD</h3>
+          </div>
+        </section>
+        <h2>Categories</h2>
         <div className={styles["catalogs-container"]}>
           <Catalog
             key={1}
