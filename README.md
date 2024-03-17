@@ -19,6 +19,7 @@ _3.Route Guards_<br>
 _4.Comments_<br>
 _4.Search bar functionality_<br>
 _4.Functional Ads panel_ <br>
+_4.Likes to work with databse_ <br>
 
 ## Things to fix!
 
