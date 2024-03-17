@@ -29,12 +29,11 @@ const Picture = ({ id, thumbnail, title, url }) => {
   }
 
   return (
-    <div className={styles["picture-wrapper"]}>
+    <div className={styles["wrapper"]} data-before={title}>
       <div
-        className={styles["pic-bckg"]}
+        className={styles["picture-wrapper"]}
         style={{ backgroundImage: `url(${url})` }}
       >
-        <h4>{title}</h4>
         {user != null ? (
           <div className={styles["favourites"]} onClick={() => handleLike(id)}>
             {isLiked ? <FcLike /> : <FcLikePlaceholder />}
