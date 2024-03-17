@@ -28,15 +28,13 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      ).then((userCredential) => {
-        dispatch(saveUser(userCredential.user.email));
-        dispatch(saveToken(userCredential.user.accessToken));
-        dispatch(saveUserId(userCredential._tokenResponse.localId));
-      });
+      await signInWithEmailAndPassword(auth, email, password).then(
+        (userCredential) => {
+          dispatch(saveUser(userCredential.user.email));
+          dispatch(saveToken(userCredential.user.accessToken));
+          dispatch(saveUserId(userCredential._tokenResponse.localId));
+        }
+      );
       if (email != "") {
         navigate("/");
       }
