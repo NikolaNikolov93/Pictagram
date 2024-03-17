@@ -1,0 +1,40 @@
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container form {
+  flex-basis: 30%;
+  align-items: center;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: rgb(218, 218, 218);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.form-container form input,
+.form-container form button {
+  height: 3em;
+  width: 20em;
+}
+.form-container form input {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  caret-color: gray;
+  border-bottom: 1px solid gray;
+}
+.form-container form button {
+  border-radius: 10px;
+}
+.form-container form button:hover {
+  background-color: lightgray;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inset box shadow */
+}
+.error-msg {
+  color: rgb(211, 90, 90);
+  text-align: center;
+  padding: 1em;
+}
