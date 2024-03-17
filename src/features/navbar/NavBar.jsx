@@ -5,6 +5,7 @@ import { IoCreateOutline } from "react-icons/io5";
 import { CiHome } from "react-icons/ci";
 import { CiStar } from "react-icons/ci";
 import { CiLogout } from "react-icons/ci";
+import { HiOutlineSearch } from "react-icons/hi";
 
 const NavBar = ({ user, logout }) => {
   return (
@@ -51,6 +52,10 @@ const NavBar = ({ user, logout }) => {
             </>
           )}
         </ul>
+        <div className={styles["search-container"]}>
+          <input className={styles["site-nav-search"]} type="text"></input>
+          <HiOutlineSearch className={styles["search-icon"]} />
+        </div>
         {user != null ? <span>Welcome, {user}!</span> : <></>}
       </div>
     </section>
