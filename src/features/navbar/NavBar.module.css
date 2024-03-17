@@ -14,7 +14,13 @@
   flex-wrap: wrap;
   gap: 1.5em;
 }
+.site-nav span {
+  color: #e60023;
+}
 
 .site-nav a {
-  color: #000;
+  color: #e60023;
+}
+.site-nav a span {
+  color: black;
 }

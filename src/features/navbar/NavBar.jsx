@@ -14,7 +14,7 @@ const NavBar = ({ user, logout }) => {
           <li>
             <Link to="/">
               <CiHome />
-              Home
+              <span>Home</span>
             </Link>
           </li>
 
@@ -23,14 +23,14 @@ const NavBar = ({ user, logout }) => {
               <li>
                 <Link to="/login">
                   <IoLogInOutline />
-                  Login
+                  <span>Login</span>
                 </Link>
               </li>
               <li>
                 <Link to="/register">
                   {" "}
                   <IoCreateOutline />
-                  Register
+                  <span>Register</span>
                 </Link>
               </li>
             </>
@@ -39,13 +39,13 @@ const NavBar = ({ user, logout }) => {
               <li>
                 <Link to="/favourites">
                   <CiStar />
-                  Favourites
+                  <span>Favourites</span>
                 </Link>
               </li>
               <li>
                 <Link to="/" onClick={logout}>
                   <CiLogout />
-                  Logout
+                  <span>Logout</span>
                 </Link>
               </li>
             </>
