@@ -20,6 +20,7 @@
 .form-container form button {
   height: 3em;
   width: 20em;
+  padding: 0.2em;
 }
 .form-container form input {
   background-color: inherit;

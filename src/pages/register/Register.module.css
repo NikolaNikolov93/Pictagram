@@ -20,6 +20,7 @@
 .form-container form button {
   height: 3em;
   width: 20em;
+  padding: 0.2em;
 }
 .form-container form input {
   background-color: inherit;
@@ -28,6 +29,7 @@
   caret-color: gray;
   border-bottom: 1px solid gray;
 }
+
 .form-container form button {
   border-radius: 30px;
   color: white;

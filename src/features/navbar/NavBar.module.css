@@ -5,11 +5,10 @@
 .site-nav {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1em 0em;
+  padding: 1em 1em;
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 .site-nav ul {
   display: flex;
