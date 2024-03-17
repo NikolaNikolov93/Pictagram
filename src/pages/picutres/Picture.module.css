@@ -30,10 +30,20 @@
 }
 .wrapper::after {
   position: absolute;
-  content: attr(data-before);
+  content: attr(data-after);
   bottom: 0;
   text-align: center;
   padding: 0.5em;
+  color: white;
+}
+.wrapper::before {
+  position: absolute;
+  content: attr(data-before);
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 0.5em;
+  z-index: 99;
 }
 @media (max-width: 1000px) {
   .wrapper {

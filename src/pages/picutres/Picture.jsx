@@ -29,7 +29,11 @@ const Picture = ({ id, thumbnail, title, url }) => {
   }
 
   return (
-    <div className={styles["wrapper"]} data-before={title}>
+    <div
+      className={styles["wrapper"]}
+      data-after={title}
+      data-before={`Likes ${id}`}
+    >
       <div
         className={styles["picture-wrapper"]}
         style={{ backgroundImage: `url(${url})` }}
