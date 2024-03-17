@@ -25,11 +25,16 @@ const Register = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await createUserWithEmailAndPassword(auth, email, password)
-        .then(setLoading(false))
-        .then(navigate("/login"));
+      const response = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      ).then(setLoading(false));
+
+      if (response) {
+        navigate("/login");
+      }
     } catch (error) {
-      console.log(error);
       setErr(error);
     }
   };
@@ -62,7 +67,7 @@ const Register = () => {
         </div>
         {err ? <div className={styles["error-msg"]}>{err.message}</div> : <></>}
         <button type="submit">Login</button>
-        <p>
+        <p className={styles["relocation-msg"]}>
           Already have an account? <Link to="/login">Click here to login</Link>
         </p>
       </form>

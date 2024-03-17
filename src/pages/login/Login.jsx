@@ -28,18 +28,22 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          dispatch(saveUser(userCredential.user.email));
-          dispatch(saveToken(userCredential.user.accessToken));
-          dispatch(saveUserId(userCredential._tokenResponse.localId));
-        })
-        .then(navigate("/"));
+      const response = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      ).then((userCredential) => {
+        dispatch(saveUser(userCredential.user.email));
+        dispatch(saveToken(userCredential.user.accessToken));
+        dispatch(saveUserId(userCredential._tokenResponse.localId));
+      });
+      if (email != "") {
+        navigate("/");
+      }
     } catch (error) {
       setErr(error);
     }
   };
-  console.log(err);
   return (
     <div className={styles["form-container"]}>
       <form onSubmit={handleSubmit}>
@@ -68,7 +72,7 @@ const Login = () => {
         </div>
         {err ? <div className={styles["error-msg"]}>{err.message}</div> : <></>}
         <button type="submit">Login</button>
-        <p>
+        <p className={styles["relocation-msg"]}>
           Don't have an account?{" "}
           <Link to="/register">Click here to register</Link>
         </p>
