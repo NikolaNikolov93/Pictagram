@@ -1,21 +1,31 @@
 .site-nav-container {
-  background-color: rgb(218, 218, 218);
+  /* background-color: rgb(218, 218, 218); */
+  background-color: white;
 }
 .site-nav {
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 1em 0em;
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 .site-nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
 }
-.site-nav span {
-  color: #e60023;
+.site-nav ul li {
+  padding: 0.5em;
+  background-color: rgb(218, 218, 218);
+  border-radius: 30px;
+}
+.user-span {
+  padding: 0.5em;
+  border-radius: 30px;
+  background-color: #e60023;
+  color: white;
 }
 
 .site-nav a {
@@ -31,10 +41,11 @@
   flex-grow: 1;
 }
 .site-nav-search {
-  padding: 0.3em;
+  padding: 0.5em;
   font-size: 1em;
   outline: none;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(218, 218, 218);
+
   border: none;
   color: black;
   border-radius: 30px;

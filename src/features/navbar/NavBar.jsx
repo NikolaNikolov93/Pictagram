@@ -56,7 +56,11 @@ const NavBar = ({ user, logout }) => {
           <input className={styles["site-nav-search"]} type="text"></input>
           <HiOutlineSearch className={styles["search-icon"]} />
         </div>
-        {user != null ? <span>Welcome, {user}!</span> : <></>}
+        {user != null ? (
+          <span className={styles["user-span"]}>Welcome, {user}!</span>
+        ) : (
+          <></>
+        )}
       </div>
     </section>
   );
