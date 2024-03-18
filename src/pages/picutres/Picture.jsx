@@ -37,23 +37,42 @@ const Picture = ({ id, thumbnail, title, url }) => {
   }
 
   return (
-    <div
-      className={styles["wrapper"]}
-      data-after={title}
-      data-before={`Likes ${id}`}
-    >
+    // <div
+    //   className={styles["wrapper"]}
+    //   data-after={title}
+    //   data-before={`Likes ${id}`}
+    // >
+    //   <div
+    //     className={styles["picture-wrapper"]}
+    //     style={{ backgroundImage: `url(${url})` }}
+    //   >
+    //     {user != null ? (
+    //       <div className={styles["favourites"]} onClick={() => handleLike(id)}>
+    //         {isLiked ? <FcLike /> : <FcLikePlaceholder />}
+    //       </div>
+    //     ) : (
+    //       <></>
+    //     )}
+    //   </div>
+    // </div>
+
+    <div className={styles["pic-container"]}>
       <div
-        className={styles["picture-wrapper"]}
+        className={styles["pic"]}
         style={{ backgroundImage: `url(${url})` }}
-      >
-        {user != null ? (
-          <div className={styles["favourites"]} onClick={() => handleLike(id)}>
-            {isLiked ? <FcLike /> : <FcLikePlaceholder />}
-          </div>
-        ) : (
-          <></>
-        )}
+      ></div>
+      <div className={styles["title"]}>{title}</div>
+      <div className={styles["pic-info"]}>
+        <p>Likes:</p>
+        <p>{id}</p>
       </div>
+      {user != null ? (
+        <div className={styles["favourites"]} onClick={() => handleLike(id)}>
+          {isLiked ? <FcLike /> : <FcLikePlaceholder />}
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
