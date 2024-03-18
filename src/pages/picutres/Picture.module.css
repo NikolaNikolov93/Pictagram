@@ -24,6 +24,9 @@
 .favourites:active {
   transform: scale(1.9);
 }
+.pic:hover {
+  opacity: 50%;
+}
 
 @media (max-width: 1000px) {
   .pic-container {
