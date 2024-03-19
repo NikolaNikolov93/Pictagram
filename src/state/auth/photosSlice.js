@@ -1,6 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const initialState = [];
+const initialState = {
+  loading: false,
+  error: null,
+  data: [],
+};
 export const fetchPhotos = createAsyncThunk(
   "photos/fetchPhotos", // action type prefix
   async () => {
@@ -24,9 +28,20 @@ const photosSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchPhotos.fulfilled, (state, action) => {
-      state.push(...action.payload);
-    });
+    builder
+      .addCase(fetchPhotos.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchPhotos.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+        state.data = action.payload;
+      })
+      .addCase(fetchPhotos.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
   },
 });
 
