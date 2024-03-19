@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Favourites.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchPhotos } from "../../state/auth/photosSlice";
+import { useSelector } from "react-redux";
 import Picture from "../picutres/Picture";
 
 const Favourites = () => {
-  const dispatch = useDispatch();
   const [likedPicsData, setLikedPicsData] = useState([]);
+  const likedPicsID = useSelector((state) => state.user.likedPics);
+  const photos = useSelector((state) => state.photos.data);
 
   useEffect(() => {
-    dispatch(fetchPhotos());
-  }, []);
-  const likedPicsID = useSelector((state) => state.user.likedPics);
-  const photos = useSelector((state) => state.photos);
-  useEffect(() => {
-    const filteredLikedPhotos = photos
-      .slice(0, 250)
-      .filter((photo) => likedPicsID.includes(photo.id));
+    const filteredLikedPhotos = photos.filter((photo) =>
+      likedPicsID.includes(photo.id)
+    );
     setLikedPicsData(filteredLikedPhotos);
   }, [likedPicsID, photos]);
 
