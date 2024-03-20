@@ -10,7 +10,7 @@ const SingleAlbum = () => {
   useEffect(() => {
     console.log("laoded");
     dispatch(fetchPhotos());
-  }, []);
+  }, [dispatch]);
   const photos = useSelector((state) => state.photos.data);
   const { albumId } = useParams();
 
