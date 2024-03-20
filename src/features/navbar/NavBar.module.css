@@ -1,6 +1,10 @@
 .site-nav-container {
-  /* background-color: rgb(218, 218, 218); */
   background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
 }
 .site-nav {
   max-width: 1280px;
